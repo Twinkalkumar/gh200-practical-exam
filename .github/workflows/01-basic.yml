@@ -1,0 +1,19 @@
+name: 01 Basic Workflow
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    basic-check:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v4
+
+            - name: Display system information
+              run: |
+                echo "Repository: $GITHUB_REPOSITORY"
+                uname -a
