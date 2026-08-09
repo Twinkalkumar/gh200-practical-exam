@@ -1,0 +1,13 @@
+name: 05 Repository Dispatch
+
+on:
+    repository_dispatch:
+        types: [deploy-request]
+
+jobs:
+    webhook-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "Environment: ${{ github.event.client_payload.environment }}"
+                echo "Version: ${{ github.event.client_payload.version }}"
