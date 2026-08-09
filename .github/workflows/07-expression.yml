@@ -49,7 +49,7 @@ jobs:
       - name: Deploy Application
         if: ${{ !contains(github.event.head_commit.message, '[skip deploy]') }}
         run: |
-          echo "Deploying application.."
+          echo "Deploying application..."
 
       - name: Deployment Skipped
         if: ${{ contains(github.event.head_commit.message, '[skip deploy]') }}
