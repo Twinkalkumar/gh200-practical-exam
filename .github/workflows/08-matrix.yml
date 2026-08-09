@@ -1,0 +1,17 @@
+name: 08 matrix
+
+on:
+    workflow_dispatch:
+
+jobs:
+    matrix:
+        strategy:
+            matrix:
+                version: [10,20,14]
+                os: [ubuntu-latest, windows-latest, macos-latest]
+        runs-on: ${{ matrix.os }}
+
+        steps:
+            - name: run matrix
+              run: |
+                echo "Install version: ${{ matrix.version }} in OS: ${{ matrix.os }}"
