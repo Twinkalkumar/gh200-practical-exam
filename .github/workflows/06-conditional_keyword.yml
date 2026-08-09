@@ -9,7 +9,9 @@ jobs:
         steps:
             - name: Deploy from main
               if: github.ref == 'refs/heads/main' && success()
-              run: echo: 'Deploying'
+              run: |
+                echo 'Deploying'
+                exit 1
 
             - name: Execute only after failure
               if: failure()
