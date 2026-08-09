@@ -20,3 +20,7 @@ jobs:
             - name: Always execute
               if: always()
               run: echo "Workflow completed."
+
+            - name: cancelled execute
+              if: cancelled()
+              run: echo "Job cancelled."
