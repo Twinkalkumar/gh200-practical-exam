@@ -10,4 +10,4 @@ jobs:
             - name: Workflow commands
               id: details
               run: |
-                echo: "::add-mast::SensitiveDemoValue"
+                echo "::add-mast::SensitiveDemoValue"
