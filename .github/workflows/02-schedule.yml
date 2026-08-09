@@ -1,0 +1,12 @@
+name: 02 Schedule Workflow
+
+on:
+    schedule:
+        - cron: "*/5 * * * *"
+    workflow_dispatch:
+
+jobs:
+    scheduled-check:
+        runs-on: ubuntu-latest
+        steps:
+            - run: date -u
