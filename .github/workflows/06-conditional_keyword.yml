@@ -1,0 +1,20 @@
+name: 06 conditional keywords workflow
+
+on:
+    workflow_dispatch:
+
+jobs:
+    conditional-keywords:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy from main
+              if: github.ref == 'refs/heads/main' && success()
+              run: echo 'Deploying'
+
+            - name: Execute only after failure
+              if: failure()
+              run: echo "A previous step failed"
+
+            - name: Always execute
+              if: always()
+              run: echo "Workflow completed."
