@@ -10,4 +10,9 @@ jobs:
             - name: Workflow commands
               id: details
               run: |
-                echo "::add-mast::SensitiveDemoValue"
+                echo "::add-mask::SensitiveDemoValue"
+                echo "::notice title=GH-200 Practice::Workflow commands are working"
+                echo "version=1.5.0" >> "$GITHUB_OUTPUT"
+                echo "### GH-200 Result" >> "$GITHUB_STEP_SUMMARY"
+                echo "Workflow completed successfully." >> "$GITHUB_STEP_SUMMARY"
+            - run: echo "Version is ${{ steps.details.outputs.version }}"
