@@ -10,6 +10,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
-            - name: Execute build script
-              shell: bash
+            - name: Make script executable
+              run: chmod +x ./scripts/build.sh
+            
+            - name: Run build script
               run: ./scripts/build.sh
