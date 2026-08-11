@@ -13,11 +13,11 @@ jobs:
                 echo "Runner OS: ${{ runner.os }}"
 
             - name: Job-Success
-              if: job.status == success()
+              if: job.status == 'success'
               run: |
                 echo "Job status: ${{ job.status }}"
             
             - name: Job-Failed
-              if: job.status == failure()
+              if: job.status == 'failure'
               run: |
                 echo "Job status: ${{ job.status }}"
