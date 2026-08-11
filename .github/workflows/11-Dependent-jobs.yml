@@ -1,0 +1,26 @@
+name: 11-dependent jobs workflow
+
+on:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        outputs:
+            version: ${{ steps.info.outputs.version }}
+            enviornment: ${{ steps.info.outputs.enviornment }}
+        steps:
+            - name: build-pipeline
+              id: info
+              run:
+                echo "Version=v1.0.0" >> $GITHUB_OUTPUT
+                echo "environment=prod" >> $GITHUB_OUTPUT
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: deploy
+              run: |
+                echo "Version: ${{ needs.build.outputs.version }}"
+                echo "Environment: ${{ needs.build.outputs.enviornment }}"
