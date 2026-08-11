@@ -14,11 +14,11 @@ jobs:
                 exit 1
 
             - name: Job-Success
-              if: failure()
+              if: job.status == 'success'
               run: |
                 echo "Job status: ${{ job.status }}"
             
             - name: Job-Failed
-              if: job.status == 'failure'
+              if: failure()
               run: |
                 echo "Job status: ${{ job.status }}"
