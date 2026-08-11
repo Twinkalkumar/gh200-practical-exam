@@ -1,0 +1,14 @@
+name: 10 workflow contexts
+
+on:
+    workflow_dispatch:
+
+jobs:
+    workflow-contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: workflow-contexts
+              run: |
+                echo "Actor: ${{ github.actor }}"
+                echo "Runner OS: ${{ runner.os }}"
+                echo "Job status: ${{ job.status }}"
