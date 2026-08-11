@@ -7,6 +7,9 @@ jobs:
     run-script:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Execute build script
               shell: bash
-              run: ../../scripts/build.sh
+              run: ./scripts/build.sh
