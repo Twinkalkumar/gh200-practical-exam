@@ -1,0 +1,30 @@
+name: default custom env veriables
+
+on:
+    push:
+
+env:
+    scope: workflow
+
+
+
+jobs:
+    env-test:
+        runs-on: ubuntu-latest
+        env:
+            job_value: job
+        steps:
+            - name: env test
+              env:
+                step_value: step
+              run: |
+                echo "$scope"
+                echo "$job_value"
+                echo "$step_value"
+            - name: default-env-test
+              run: |
+                echo "$GITHUB_WORKFLOW"
+                echo "$GITHUB_RUN_ID"
+                echo "$GITHUB_RUN_NUMBER"
+                echo "$GITHUB_SHA"
+                echo "$GITHUB_REF"
