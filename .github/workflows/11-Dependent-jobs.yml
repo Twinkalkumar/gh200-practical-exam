@@ -8,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             version: ${{ steps.info.outputs.version }}
-            enviornment: ${{ steps.info.outputs.enviornment }}
+            enviornment: ${{ steps.info.outputs.environment }}
         steps:
             - name: build-pipeline
               id: info
