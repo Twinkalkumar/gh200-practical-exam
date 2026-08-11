@@ -12,4 +12,4 @@ jobs:
 
             - name: Execute build script
               shell: bash
-              run: ls -R
+              run: ./scripts/build.sh
