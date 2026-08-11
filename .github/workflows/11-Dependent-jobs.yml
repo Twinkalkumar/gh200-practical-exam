@@ -12,7 +12,7 @@ jobs:
         steps:
             - name: build-pipeline
               id: info
-              run:
+              run: |
                 echo "Version=v1.0.0" >> $GITHUB_OUTPUT
                 echo "environment=prod" >> $GITHUB_OUTPUT
 
