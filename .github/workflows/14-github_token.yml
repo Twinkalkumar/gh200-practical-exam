@@ -14,9 +14,10 @@ jobs:
             - uses: actions/github-script@v7
               with:
                 script: |
-                 await github.rest.issues.create({
-                 owner: context.repo.owner,
-                 repo: context.repo.repo,
-                 title: 'Automated GH-200 issue',
-                 body: 'Created using GITHUB_TOKEN'
+                 await github.rest.issues.create
+                 ({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    title: 'Automated GH-200 issue',
+                    body: 'Created using GITHUB_TOKEN'
                  })
