@@ -19,4 +19,4 @@ jobs:
         - uses: docker/build-push-action@v6
           with:
             push: true
-            tags: ghcr.io/${{ github.repository_owner }}/gh200-app:${{ github.sha }}
+            tags: ghcr.io/twinkal/gh200-app:${{ github.sha }}
