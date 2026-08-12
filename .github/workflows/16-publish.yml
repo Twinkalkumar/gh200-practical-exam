@@ -22,20 +22,6 @@ jobs:
                 node-version: 22
                 registry-url: https://npm.pkg.github.com
                 scope: '@twinkalkumar'
-
-            - name: Show npm config
-              run: npm config list
-
-            - name: Check token exists
-              run: |
-                if [ -z "$NODE_AUTH_TOKEN" ]; then
-                echo "Token missing"
-                exit 1
-                else
-                echo "Token available"
-                fi
-              env:
-                NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
             - name: Install dependencies
               run: npm install
