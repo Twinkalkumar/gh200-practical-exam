@@ -6,7 +6,6 @@ on:
 permissions:
     contents: read
     packages: write
-    builds: write
 
 jobs:
     build-publish:
@@ -20,4 +19,4 @@ jobs:
         - uses: docker/build-push-action@v6
           with:
             push: true
-            tags: ghcr.io/twinkal/gh200-app:${{ github.sha }}
+            tags: ghcr.io/twinkalkumar/gh200-app:${{ github.sha }}
