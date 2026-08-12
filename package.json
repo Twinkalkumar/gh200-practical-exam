@@ -1,8 +1,11 @@
 {
-  "name": "gh200-practical-exam",
+  "name": "@twinkalkumar/gh200-practical-exam",
   "version": "1.0.0",
   "description": "gh200-practical-exam",
   "main": "index.js",
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
