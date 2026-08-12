@@ -1,4 +1,4 @@
-name: publish github package
+name: 16 publish github package
 
 on:
     push:
@@ -12,7 +12,6 @@ permissions:
 jobs:
     publish:
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -22,6 +21,7 @@ jobs:
               with:
                 node-version: 22
                 registry-url: https://npm.pkg.github.com
+                scope: '@twinkalkumar'
             
             - name: Install dependencies
               run: npm install
