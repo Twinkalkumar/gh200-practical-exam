@@ -1,8 +1,7 @@
 name: 17 Publish Docker Image
 
 on:
-    push:
-        workflow_dispatch:
+    workflow_dispatch:
         
 jobs:
     build:
