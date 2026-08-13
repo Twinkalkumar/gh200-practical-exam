@@ -7,7 +7,7 @@
   "registry": "https://npm.pkg.github.com"
 },
   "scripts": {
-    "test": "index.js"
+    "test": "../../index.js"
   },
   "repository": {
     "type": "git",
