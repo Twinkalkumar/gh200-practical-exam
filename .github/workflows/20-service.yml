@@ -38,4 +38,6 @@ jobs:
           DB_USER: postgres
           DB_PASSWORD: postgres
           DB_NAME: gh200
-        run: npm test
+        run: |
+          ls -la
+          npm test
