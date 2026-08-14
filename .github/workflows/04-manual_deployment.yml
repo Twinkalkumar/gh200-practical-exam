@@ -8,9 +8,10 @@ on:
                 required: true
                 type: choice
                 options:
+                    - production
                     - development
                     - staging
-                    - production
+                    
             version:
                 description: Application version
                 required: true
