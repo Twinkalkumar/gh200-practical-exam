@@ -7,7 +7,6 @@ on:
                 description: Deployment environment
                 required: true
                 type: choice
-                value: development
                 options:
                     - development
                     - staging
